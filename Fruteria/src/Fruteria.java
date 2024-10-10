@@ -1,10 +1,18 @@
 import java.util.Scanner;
 
+
+//Codigo escrito y comentado por Massimo ;>
 public class Fruteria {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Producto[] productos = new Producto[2];
         
+        System.out.println("**************************************************");
+        System.out.println("*                                                *");
+        System.out.println("*          ¡BIENVENIDOS A LA FRUTERIA!           *");
+        System.out.println("*                                                *");
+        System.out.println("**************************************************\n");
+
         // Pedimos los precios sin IVA de cada producto
         System.out.println("Introduce el precio de las manzanas sin IVA: ");
         double precioManzana = sc.nextDouble();
@@ -20,9 +28,10 @@ public class Fruteria {
         // Bucle para atender varios clientes
         while (continuar) {
             // Pedimos la cantidad de cada fruta
-            System.out.print("Introduce la cantidad de peras (kg) que quiere comprar: ");
+            System.out.printf("Introduce la cantidad de peras (kg) que quiere comprar: ");2
+
             double kgPeras = sc.nextDouble();
-            System.out.print("Introduce la cantidad de manzanas (kg) que quiere comprar: ");
+            System.out.printf("Introduce la cantidad de manzanas (kg) que quiere comprar: ");
             double kgManzanas = sc.nextDouble();
 
             // Calculamos el precio total y mostramos la factura
@@ -44,7 +53,7 @@ public class Fruteria {
             System.out.printf("\nTotal factura: %10.2f\n", totalFactura);
 
             // Preguntar si desea continuar con otro cliente
-            System.out.print("¿Desea atender a otro cliente? (s/n): ");
+            System.out.printf("¿Desea atender a otro cliente? (s/n): ");
             String respuesta = sc.next();
             if (respuesta.equalsIgnoreCase("n")) {
                 continuar = false;
